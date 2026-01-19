@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Kalkulator Volume Balok</title>
+    <style>
+        body {
+            font-family: Arial;
+            background: linear-gradient(to right, #4facfe, #00f2fe);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .box {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            width: 320px;
+            text-align: center;
+            box-shadow: 0px 0px 15px rgba(0,0,0,0.3);
+        }
+
+        h2 {
+            margin-bottom: 20px;
+        }
+
+        input {
+            width: 90%;
+            padding: 8px;
+            margin: 8px 0;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        button {
+            background: #4facfe;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            margin-top: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #00c6ff;
+        }
+
+        #hasil {
+            margin-top: 15px;
+            font-weight: bold;
+            font-size: 18px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <h2>Kalkulator Volume Balok</h2>
+
+        <input type="number" id="panjang" placeholder="Masukkan Panjang">
+        <input type="number" id="lebar" placeholder="Masukkan Lebar">
+        <input type="number" id="tinggi" placeholder="Masukkan Tinggi">
+
+        <button onclick="hitung()">Hasil</button>
+
+        <div id="hasil"></div>
+    </div>
+
+    <script>
+        function hitung() {
+            var p = document.getElementById("panjang").value;
+            var l = document.getElementById("lebar").value;
+            var t = document.getElementById("tinggi").value;
+
+            var volume = p * l * t;
+
+            document.getElementById("hasil").innerHTML =
+                "Volume Balok = " + volume;
+        }
+    </script>
+</body>
+</html>
